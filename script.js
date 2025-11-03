@@ -73,6 +73,7 @@ const handleMouseMove = (e) => {
   animate()
 }
 
+
 const handleMouseDown = e => {
   isDown = true
   startX = e.clientX || (e.touches && e.touches[0].clientX) || 0
