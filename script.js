@@ -1,7 +1,7 @@
 /*--------------------
 Vars
 --------------------*/
-let progress = 50
+let progress = 0
 let startX = 0
 let active = 0
 let isDown = false
@@ -27,6 +27,13 @@ const displayItems = (item, index, active) => {
   const zIndex = getZindex([...$items], active)[index]
   item.style.setProperty('--zIndex', zIndex)
   item.style.setProperty('--active', (index-active)/$items.length)
+  
+  // Add active class for animations
+  if (index === active) {
+    item.classList.add('active')
+  } else {
+    item.classList.remove('active')
+  }
 }
 
 /*--------------------
